@@ -1,11 +1,13 @@
 import Navbar from './components/Navbar';
 import Home from './components/Home'
+import Sidebar from './components/Sidebar';
 // import logo from './Assets/final_logo.png';
 
 function App() {
   return (
     <>
       <Navbar />
+      {/* <Sidebar /> */}
       <Home />
     </>
     // <nav className="relative container mx-auto p-6">

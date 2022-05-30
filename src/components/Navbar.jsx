@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import logo from "../Assets/mujtaba.png";
+import Sidebar from "./Sidebar";
 
 const navigation = [
   { name: "Home", href: "#", current: false },
@@ -30,7 +31,7 @@ export default function Navbar() {
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
                   <img
-                    className="block lg:hidden h-8 w-auto"
+                    className="block lg:hidden h-10 w-auto"
                     src={logo}
                     alt="logo"
                   />
@@ -70,29 +71,11 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
+              <Disclosure.Panel className="sm:hidden">
+                  <Sidebar />
+              </Disclosure.Panel>
             </div>
           </div>
-
-          <Disclosure.Panel className="sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block px-3 py-2 rounded-md text-base font-medium"
-                  )}
-                  aria-current={item.current ? "page" : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-            </div>
-          </Disclosure.Panel>
         </>
       )}
     </Disclosure>
