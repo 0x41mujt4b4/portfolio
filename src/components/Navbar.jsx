@@ -62,7 +62,7 @@ export default function Navbar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:hidden sm:inset-auto sm:ml-6 sm:pr-0">
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 z-20 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -71,9 +71,38 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <Disclosure.Panel className="sm:hidden">
-                  <Sidebar />
+              <Transition
+                show={open}
+                enter="transition-opacity duration-300"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="transition-opacity duration-150"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              >
+                <Disclosure.Panel
+                className={`top-0 right-0 fixed bg-blue-500 bg-opacity-50 text-center w-60 h-full p-10 rounded-sm z-10 ${
+                  open ? "translate-x-0" : "translate-x-full"
+                } ease-in-out duration-300`}
+              >
+                {navigation.map((item) => (
+                  <Disclosure.Button
+                    key={item.name}
+                    as="a"
+                    href={item.href}
+                    className={classNames(
+                      item.current
+                        ? "bg-gray-900 text-white"
+                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      "block px-3 py-2 rounded-md text-base font-medium"
+                    )}
+                    aria-current={item.current ? "page" : undefined}
+                  >
+                    {item.name}
+                  </Disclosure.Button>
+                ))}
               </Disclosure.Panel>
+              </Transition>
             </div>
           </div>
         </>
