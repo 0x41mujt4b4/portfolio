@@ -72,36 +72,34 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <Transition
+                className="sm:hidden top-0 right-0 fixed bg-blue-900 text-center h-full p-10 rounded-sm z-10"
+                appear={true}
                 show={open}
-                enter="transition-opacity duration-300"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="transition-opacity duration-150"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
+                enter="transition ease-in-out duration-300 transform"
+                enterFrom="translate-x-full"
+                enterTo="translate-x-0"
+                leave="transition ease-in-out duration-300 transform"
+                leaveFrom="translate-x-0"
+                leaveTo="translate-x-full"
               >
-                <Disclosure.Panel
-                className={`top-0 right-0 fixed bg-blue-500 bg-opacity-50 text-center w-60 h-full p-10 rounded-sm z-10 ${
-                  open ? "translate-x-0" : "translate-x-full"
-                } ease-in-out duration-300`}
-              >
-                {navigation.map((item) => (
-                  <Disclosure.Button
-                    key={item.name}
-                    as="a"
-                    href={item.href}
-                    className={classNames(
-                      item.current
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                      "block px-3 py-2 rounded-md text-base font-medium"
-                    )}
-                    aria-current={item.current ? "page" : undefined}
-                  >
-                    {item.name}
-                  </Disclosure.Button>
-                ))}
-              </Disclosure.Panel>
+                <Disclosure.Panel>
+                  {navigation.map((item) => (
+                    <Disclosure.Button
+                      key={item.name}
+                      as="a"
+                      href={item.href}
+                      className={classNames(
+                        item.current
+                          ? "bg-gray-900 text-white"
+                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                        "block px-3 py-2 rounded-md text-base font-medium"
+                      )}
+                      aria-current={item.current ? "page" : undefined}
+                    >
+                      {item.name}
+                    </Disclosure.Button>
+                  ))}
+                </Disclosure.Panel>
               </Transition>
             </div>
           </div>
