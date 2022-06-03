@@ -1,51 +1,40 @@
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Disclosure, Transition } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import logo from "../Assets/mujtaba.png";
 import Sidebar from "./Sidebar";
-import {MdHome, MdInfo, MdContactPage, MdFolder} from 'react-icons/md'
-import {FaHandHoldingHeart, FaFolder} from 'react-icons/fa'
+import { MdHome, MdInfo, MdContactPage, MdFolder } from "react-icons/md";
+import { FaHandHoldingHeart } from "react-icons/fa";
 
 const navigation = [
   {
     name: "Home",
     href: "#",
     current: false,
-    icon: (
-      <MdHome size={20}/>
-    ),
+    icon: <MdHome size={20} />,
   },
   {
     name: "About",
     href: "#",
     current: false,
-    icon: (
-      <MdInfo size={20}/>
-    ),
+    icon: <MdInfo size={20} />,
   },
   {
     name: "Service",
     href: "#",
     current: false,
-    icon: (
-      <FaHandHoldingHeart size={20}/>
-    ),
+    icon: <FaHandHoldingHeart size={20} />,
   },
   {
     name: "Portfolio",
     href: "#",
     current: false,
-    icon: (
-      <MdFolder size={20} />
-    ),
+    icon: <MdFolder size={20} />,
   },
   {
     name: "Contact",
     href: "#",
     current: false,
-    icon: (
-      <MdContactPage size={20}/>
-    ),
+    icon: <MdContactPage size={20} />,
   },
 ];
 
