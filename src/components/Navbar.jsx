@@ -3,14 +3,50 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import logo from "../Assets/mujtaba.png";
 import Sidebar from "./Sidebar";
+import {MdHome, MdInfo, MdContactPage, MdFolder} from 'react-icons/md'
+import {FaHandHoldingHeart, FaFolder} from 'react-icons/fa'
 
 const navigation = [
-  { name: "Home", href: "#", current: false },
-  { name: "About", href: "#", current: false },
-  { name: "Service", href: "#", current: false },
-  { name: "Portfolio", href: "#", current: false },
-  { name: "Blog", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
+  {
+    name: "Home",
+    href: "#",
+    current: false,
+    icon: (
+      <MdHome size={20}/>
+    ),
+  },
+  {
+    name: "About",
+    href: "#",
+    current: false,
+    icon: (
+      <MdInfo size={20}/>
+    ),
+  },
+  {
+    name: "Service",
+    href: "#",
+    current: false,
+    icon: (
+      <FaHandHoldingHeart size={20}/>
+    ),
+  },
+  {
+    name: "Portfolio",
+    href: "#",
+    current: false,
+    icon: (
+      <MdFolder size={20} />
+    ),
+  },
+  {
+    name: "Contact",
+    href: "#",
+    current: false,
+    icon: (
+      <MdContactPage size={20}/>
+    ),
+  },
 ];
 
 function classNames(...classes) {
@@ -61,7 +97,7 @@ export default function Navbar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:hidden sm:inset-auto sm:ml-6 sm:pr-0">
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 z-20 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 z-20 hover:text-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -71,7 +107,7 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <Transition
-                className="sm:hidden top-0 right-0 fixed bg-blue-900 text-center h-full p-10 rounded-sm z-10"
+                className="sm:hidden top-0 right-0 fixed text-center my-[50%] px-4 rounded-sm z-10"
                 appear={true}
                 show={open}
                 enter="transition ease-in-out duration-300 transform"
@@ -81,22 +117,24 @@ export default function Navbar() {
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-full"
               >
-                <Disclosure.Panel>
+                <Disclosure.Panel as="ul" className="space-y-2">
                   {navigation.map((item) => (
-                    <Disclosure.Button
-                      key={item.name}
-                      as="a"
-                      href={item.href}
-                      className={classNames(
-                        item.current
-                          ? "bg-gray-900 text-white"
-                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                        "block px-3 py-2 rounded-md text-base font-medium"
-                      )}
-                      aria-current={item.current ? "page" : undefined}
-                    >
-                      {item.name}
-                    </Disclosure.Button>
+                    <li>
+                      <Disclosure.Button
+                        key={item.name}
+                        as="a"
+                        href={item.href}
+                        className={classNames(
+                          item.current
+                            ? "bg-gray-900 text-white"
+                            : "flex items-center rounded-lg p-2 text-base font-normal text-gray-900 bg-[#00073d] hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                        )}
+                        aria-current={item.current ? "page" : undefined}
+                      >
+                        {item.icon}
+                        <span className="ml-3">{item.name}</span>
+                      </Disclosure.Button>
+                    </li>
                   ))}
                 </Disclosure.Panel>
               </Transition>
