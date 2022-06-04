@@ -13,19 +13,13 @@ const navigation = [
     icon: <MdHome size={20} />,
   },
   {
-    name: "About",
-    href: "#",
-    current: false,
-    icon: <MdInfo size={20} />,
-  },
-  {
     name: "Service",
     href: "#",
     current: false,
     icon: <FaHandHoldingHeart size={20} />,
   },
   {
-    name: "Portfolio",
+    name: "Projects",
     href: "#",
     current: false,
     icon: <MdFolder size={20} />,
@@ -35,6 +29,12 @@ const navigation = [
     href: "#",
     current: false,
     icon: <MdContactPage size={20} />,
+  },
+  {
+    name: "About",
+    href: "#",
+    current: false,
+    icon: <MdInfo size={20} />,
   },
 ];
 
@@ -96,7 +96,7 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <Transition
-                className="sm:hidden top-0 right-0 fixed text-center my-[50%] px-4 rounded-sm z-10"
+                className="sm:hidden backdrop-brightness-125 rounded-lg backdrop-blur-sm py-4 top-0 right-0 fixed text-center my-[50%] px-4 z-10"
                 appear={true}
                 show={open}
                 enter="transition ease-in-out duration-300 transform"
@@ -116,7 +116,7 @@ export default function Navbar() {
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
-                            : "flex items-center rounded-lg p-2 text-base font-normal text-gray-900 bg-[#00073d] hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                            : "flex items-center rounded-lg p-2 text-base font-normal text-gray-900 bg-[#00073d] hover:bg-gray-100 dark:text-white dark:hover:bg-red-500"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
