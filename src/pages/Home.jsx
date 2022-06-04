@@ -15,11 +15,6 @@ export default function Home() {
           }}
         />
       </h1>
-      {/* <Typed className="flex md:text-6xl text-4xl text-red-500 " 
-            strings={["Python Developer", "React Developer"]} 
-            typeSpeed={60}
-            loop
-             /> */}
       <h1 className="text-gray-300 md:text-6xl text-4xl ">Based in Sudan.</h1>
     </div>
   );

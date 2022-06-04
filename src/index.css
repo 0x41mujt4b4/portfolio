@@ -4,7 +4,7 @@
 
 
 body {
-    background: url("./Assets/backgroundblue.jpg");
+    background: url("./assets/backgroundblue.jpg");
     height: 100vh;
     /* Center and scale the image nicely */
     background-position: center;
