@@ -1,7 +1,7 @@
 import React from "react";
 import {BsArrowLeftShort} from "react-icons/bs";
 import { useState } from "react";
-import { Disclosure, Transition } from "@headlessui/react";
+// import { Disclosure, Transition } from "@headlessui/react";
 import { MdHome, MdInfo, MdContactPage, MdFolder } from "react-icons/md";
 import { FaHandHoldingHeart } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
