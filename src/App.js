@@ -5,7 +5,7 @@ import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import Service from "./pages/Service";
 import Navbar from "./components/Navbar";
-
+import Sidebar from "./components/Sidebar"
 
 let pages = [
   { name: Home, path: "" },
@@ -18,6 +18,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Sidebar />
       <Routes>
       {pages.map((page) => <Route path={page.path} element={<page.name />}/>)}
       </Routes>

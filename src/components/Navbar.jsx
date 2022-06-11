@@ -5,6 +5,7 @@ import { MdHome, MdInfo, MdContactPage, MdFolder } from "react-icons/md";
 import { FaHandHoldingHeart } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import React from 'react'
+import Sidebar from "./Sidebar";
 
 const navigation = [
   {
@@ -70,7 +71,7 @@ export default function Navbar() {
                         to={item.to}
                         className={({ isActive }) =>
                           isActive
-                            ? "border-b-2 rounded-md text-red-500 px-3 py-2"
+                            ? "underline underline-offset-8 text-red-500 px-3 py-2"
                             : "text-gray-300 hover:text-red-500 px-3 py-2 rounded-md"
                         }
                       >
@@ -80,7 +81,7 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:hidden sm:inset-auto sm:ml-6 sm:pr-0">
+              {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:hidden sm:inset-auto sm:ml-6 sm:pr-0">
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 z-20 hover:text-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -89,9 +90,9 @@ export default function Navbar() {
                     <MenuIcon className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
-              </div>
-              <Transition
-                className="sm:hidden backdrop-brightness-125 rounded-lg backdrop-blur-sm py-4 top-0 right-0 fixed text-center my-[50%] px-4 z-10"
+              </div> */}
+              {/* <Transition
+                className="backdrop-brightness-125 rounded-lg backdrop-blur-sm py-4 top-0 right-0 fixed text-center my-[50%] px-4 z-10"
                 appear={true}
                 show={open}
                 enter="transition ease-in-out duration-300 transform"
@@ -101,6 +102,7 @@ export default function Navbar() {
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-full"
               >
+                <Sidebar open={open}/>
                 <Disclosure.Panel as="ul" className="space-y-2">
                   {navigation.map((item) => (
                     <li>
@@ -123,7 +125,7 @@ export default function Navbar() {
                     </li>
                   ))}
                 </Disclosure.Panel>
-              </Transition>
+              </Transition> */}
             </div>
           </div>
         </>
