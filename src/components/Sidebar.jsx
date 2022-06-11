@@ -44,7 +44,11 @@ function Sidebar() {
   return (
     <div className="sm:hidden flex items-center top-0 right-0 h-full justify-center fixed">
       <div className={`backdrop-brightness-125 text-white backdrop-blur-sm rounded-lg py-2 ${open ? "w-36" : "w-12"} duration-300 `}>
+<<<<<<< HEAD
         <BsArrowLeftShort className={`bg-blue-900 text-3xl rounded-full absolute -left-4 top-9 cursor-pointer ${open && "rotate-180"}`} onClick={() => setOpen(!open)} />
+=======
+        <BsArrowLeftShort className={`bg-blue-900 text-3xl rounded-full absolute -left-4 top-9 cursor-pointer duration-300 ${open && "rotate-180"}`} onClick={() => setOpen(!open)} />
+>>>>>>> 99f5448d07c064981498525f148b28676841bbd6
         <div className={`flex justify-center`}>
           <ul className="space-y-2">
                     {navigation.map((item) => (
