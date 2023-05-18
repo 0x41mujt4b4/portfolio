@@ -1,12 +1,13 @@
 import { Disclosure, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import logo from "../public/mujtaba.png";
+import logo from "../public/logo.png";
 import { MdHome, MdInfo, MdContactPage, MdFolder } from "react-icons/md";
 import { FaHandHoldingHeart } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import {Link} from "react-scroll";
 import { NavHashLink } from "react-router-hash-link";
+import Image from 'next/image'
 
 const navigation = [
   {
@@ -53,12 +54,12 @@ export default function Navbar() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <img
+                  <Image
                     className="block lg:hidden h-10 w-auto"
                     src={logo}
                     alt="logo"
                   />
-                  <img
+                  <Image
                     className="hidden lg:block h-10 w-auto"
                     src={logo}
                     alt="logo"

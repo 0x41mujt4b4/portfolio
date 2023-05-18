@@ -1,20 +1,17 @@
-import Typewriter from "typewriter-effect";
+import Home from './home'
+import Service from './service'
+import Projects from './projects'
+import Contact from './contact'
+import About from './about'
 
-export default function Home() {
+export default function App() {
   return (
-    <div className="w-screen h-screen mt-0 pt-36" id="home">
-      <h1 className="text-gray-300 font-semibold md:text-6xl text-3xl ">Hi, I'm Almujtaba</h1>
-      <h1 className="flex md:text-6xl text-3xl font-semibold text-red-500 ">
-        <Typewriter
-          options={{
-            strings: ["Python Developer", "React Developer"],
-            autoStart: true,
-            delay: 75,
-            loop: true,
-          }}
-        />
-      </h1>
-      <h1 className="text-gray-300 font-semibold md:text-6xl text-3xl ">Based in Sudan.</h1>
+    <div className='container'>
+    <Home />
+    <Service />
+    <Projects />
+    <Contact />
+    <About />
     </div>
   );
 }
