@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect";
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen mt-0 pt-36" id="home">
+    <div className="flex flex-col justify-center min-h-screen mx-auto" id="home">
       <h1 className="text-gray-300 font-semibold md:text-6xl text-3xl ">
         Hi, I'm Almujtaba
       </h1>

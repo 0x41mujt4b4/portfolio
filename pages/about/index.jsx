@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div className="h-screen text-lg text-center " id='about'>About Page</div>
+    <div className="min-h-screen text-lg text-center " id='about'>About Page</div>
   )
 }
 

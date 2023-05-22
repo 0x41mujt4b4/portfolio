@@ -1,13 +1,17 @@
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
+// import Header from "../components/Header";
+import Footer from "../components/Footer"
 
 function Layout(props) {
   return (
-    <div className="container p-8 md:p-24 space-y-6">
+    <>
+      {/* <Header /> */}
       <Navbar />
       <Sidebar />
       {props.children}
-    </div>
+      <Footer />
+    </>
   );
 }
 

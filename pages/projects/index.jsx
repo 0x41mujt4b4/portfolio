@@ -2,7 +2,7 @@ import React from 'react'
 
 function Projects() {
   return (
-    <div className="w-screen h-screen text-lg text-center" id='projects'>Projects Page</div>
+    <div className="h-screen text-lg text-center" id='projects'>Projects Page</div>
   )
 }
 

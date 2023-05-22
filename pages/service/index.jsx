@@ -2,7 +2,7 @@ import React from 'react'
 
 function Service() {
   return (
-    <div className="w-screen h-screen text-lg text-center" id='service'>Service Page</div>
+    <div className="min-h-screen text-lg text-center" id='service'>Service Page</div>
   )
 }
 
