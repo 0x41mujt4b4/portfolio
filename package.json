@@ -5,6 +5,7 @@
   "dependencies": {
     "@headlessui/react": "^1.6.2",
     "@heroicons/react": "^1.0.6",
+    "@lottiefiles/react-lottie-player": "^3.5.3",
     "framer-motion": "^6.3.6",
     "next": "^13.4.2",
     "react": "^18.2.0",

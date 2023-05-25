@@ -47,22 +47,18 @@ export default function Navbar() {
   return (
     <nav className='fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-slate-700'>
               <div className='w-full m-auto flex justify-center sm:justify-between items-center p-4 text-white'>
-                <div className="flex-shrink-0 flex items-center">
+                <div className="flex flex-shrink-0 items-center space-x-1">
                   <Image
-                    className="flex lg:hidden h-10 w-auto m-0"
+                    className="h-10 w-auto m-0"
                     src={logo}
                     alt="logo"
                   />
-                  <Image
-                    className="hidden lg:flex h-10 w-auto m-0"
-                    src={logo}
-                    alt="logo"
-                  />
+                  <span className="font-bold cursor-default tracking-wider">MUJTABA</span>
                 </div>
                 <div className="hidden sm:flex sm:ml-6">
                   <ul className="flex items-center space-x-4">
                     {navigation.map((item) => (
-                      <li><Link className="cursor-pointer text-gray-300 hover:text-red-500 px-3 py-2 rounded-md" activeClass="underline underline-offset-8 decoration-red-500 px-3 py-2" spy={true} to={item.to} smooth={true} duration={500} offset={-100} >{item.name}</Link></li>
+                      <li><Link className="cursor-pointer text-gray-300 hover:text-red-500 px-3 py-2 rounded-md" activeClass="underline underline-offset-8 decoration-red-500 px-3 py-2" spy={true} to={item.to} smooth={true} duration={300} offset={-100} >{item.name}</Link></li>
                     ))}
                   </ul>
                 </div>

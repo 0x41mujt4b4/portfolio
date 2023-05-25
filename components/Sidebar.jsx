@@ -56,8 +56,8 @@ function Sidebar() {
                           to={item.to}
                           smooth={true}
                           spy={true}
-                          duration={500}
-                          offset={-70}
+                          duration={300}
+                          offset={-90}
                           // className={({ isActive }) =>
                           //   isActive
                           //     ? "underline underline-offset-8 decoration-red-500 text-red-500"
