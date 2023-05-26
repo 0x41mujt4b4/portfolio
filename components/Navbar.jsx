@@ -45,7 +45,7 @@ const navigation = [
 
 export default function Navbar() {
   return (
-    <nav className='fixed left-0 top-0 w-full z-10 ease-in duration-300 hover:bg-blue-700'>
+    <nav className='fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-blue-600 bg-opacity-50 backdrop-blur-md rounded drop-shadow-lg'>
               <div className='w-full m-auto flex justify-center sm:justify-between items-center p-4 text-white'>
                 <div className="flex flex-shrink-0 items-center space-x-1">
                   <Image
@@ -58,7 +58,7 @@ export default function Navbar() {
                 <div className="hidden sm:flex sm:ml-6">
                   <ul className="flex items-center space-x-4">
                     {navigation.map((item) => (
-                      <li><Link className="cursor-pointer text-gray-300 hover:text-red-500 px-3 py-2 rounded-md" activeClass="underline underline-offset-8 decoration-red-500 px-3 py-2" spy={true} to={item.to} smooth={true} duration={300} offset={-100} >{item.name}</Link></li>
+                      <li><Link className="cursor-pointer text-gray-300 hover:text-blue-950 px-3 py-2 rounded-md" activeClass="underline underline-offset-8 decoration-blue-950 px-3 py-2" spy={true} to={item.to} smooth={true} duration={300} offset={-100} >{item.name}</Link></li>
                     ))}
                   </ul>
                 </div>
