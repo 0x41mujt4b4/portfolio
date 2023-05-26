@@ -45,7 +45,7 @@ const navigation = [
 
 export default function Navbar() {
   return (
-    <nav className='fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-slate-700'>
+    <nav className='fixed left-0 top-0 w-full z-10 ease-in duration-300 hover:bg-blue-700'>
               <div className='w-full m-auto flex justify-center sm:justify-between items-center p-4 text-white'>
                 <div className="flex flex-shrink-0 items-center space-x-1">
                   <Image
