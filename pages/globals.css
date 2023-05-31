@@ -16,7 +16,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Sora', 'Chivo', 'source-code-pro';
+    font-family: 'Sora';
+    /* font-family: 'Satisfy', cursive, 'Sora', 'Chivo', 'source-code-pro'; */
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
     -moz-osx-font-smoothing: grayscale;

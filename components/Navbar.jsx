@@ -17,8 +17,8 @@ const navigation = [
     icon: <MdHome size={20} />,
   },
   {
-    name: "Service",
-    to: "service",
+    name: "Experience",
+    to: "experience",
     current: false,
     icon: <FaHandHoldingHeart size={20} />,
   },

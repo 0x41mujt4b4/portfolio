@@ -1,5 +1,5 @@
 import Home from './home'
-import Service from './service'
+import Experience from './experience'
 import Projects from './projects'
 import Contact from './contact'
 import About from './about'
@@ -14,7 +14,7 @@ export default function App() {
     <Navbar />
     <main className='flex flex-col'>
       <Home />
-      <Service />
+      <Experience />
       <Projects />
       <Contact />
       <About />
