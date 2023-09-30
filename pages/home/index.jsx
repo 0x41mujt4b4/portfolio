@@ -17,7 +17,7 @@ export default function Home() {
         <h1 className="flex md:text-4xl text-2xl font-semibold text-red-500 ">
           <Typewriter
             options={{
-              strings: ["Fullstack Web Develooper!", "Python Developer", "React Developer"],
+              strings: ["Fullstack Web Developer!", "Python Developer", "React Developer"],
               autoStart: true,
               delay: 75,
               loop: true,

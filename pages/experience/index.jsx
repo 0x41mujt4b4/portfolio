@@ -5,7 +5,7 @@ const experiences = [
   description: 'Pellentesque feugiat ante at nisl efficitur, in mollis orciscelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.'
   },
   {
-  name:"React Developer @ Dot Energy",
+  name:"Front-End Developer @ Dot Energy",
   date: 'Sep 2020',
   description: 'Pellentesque feugiat ante at nisl efficitur, in mollis orciscelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.'
   },
@@ -23,7 +23,7 @@ const experiences = [
 
 function Experience() {
   return (
-    <section className="min-h-screen dark:text-gray-100" id="experience">
+    <section className="dark:text-gray-100 min-h-screen" id="experience">
       <div className="container max-w-5xl px-4 py-12 mx-auto">
         <div className="grid gap-4 mx-4 sm:grid-cols-12">
           <div className="col-span-12 sm:col-span-3">

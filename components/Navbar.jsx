@@ -58,7 +58,7 @@ export default function Navbar() {
                 <div className="hidden sm:flex sm:ml-6">
                   <ul className="flex items-center space-x-4">
                     {navigation.map((item) => (
-                      <li><Link className="cursor-pointer text-gray-300 hover:text-blue-950 px-3 py-2 rounded-md" activeClass="underline underline-offset-8 decoration-blue-950 px-3 py-2" spy={true} to={item.to} smooth={true} duration={300} offset={-100} >{item.name}</Link></li>
+                      <li><Link className="cursor-pointer text-gray-300 hover:text-blue-950 px-3 py-2 rounded-md" activeClass="underline underline-offset-8 decoration-blue-950 text-blue-950 px-3 py-2" spy={true} to={item.to} smooth={true} duration={300} offset={-100} >{item.name}</Link></li>
                     ))}
                   </ul>
                 </div>
