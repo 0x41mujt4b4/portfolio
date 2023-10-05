@@ -22,7 +22,7 @@ const Footer = () => {
           <br />
           Powered by{" "}
           <a href="https://remix.run/" target="_blank" rel="noopener noreferrer">
-            Remix
+            Almujtaba
           </a>
           .
         </span>

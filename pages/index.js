@@ -6,6 +6,7 @@ import About from './about'
 import Layout from '@/components/Layout'
 import Navbar from '@/components/Navbar'
 import Sidebar from '@/components/Sidebar'
+import Footer from '@/components/Footer'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <Contact />
       <About />
     </main>
+    <Footer/>
     </>
   );
 }
