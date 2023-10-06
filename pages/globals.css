@@ -8,8 +8,8 @@
 
 
 body {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
     /* background: url("../public/backgroundblue.jpg"); */
     /* height: 100vh; */
     /* Center and scale the image nicely */

@@ -13,8 +13,8 @@ const NAV_ITEMS = [
 ];
 
 const Navbar = () => (
-  <nav className='fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-blue-600 bg-opacity-50 backdrop-blur-md rounded drop-shadow-lg'>
-    <div className='w-full m-auto flex justify-center sm:justify-between items-center p-4 text-white'>
+  <nav className='fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-gray-800 text-white'>
+    <div className='w-full m-auto flex justify-center sm:justify-between items-center p-4'>
       <Logo />
       <Navigation />
     </div>
@@ -24,7 +24,7 @@ const Navbar = () => (
 const Logo = () => (
   <div className="flex flex-shrink-0 items-center space-x-1">
     <Image className="h-10 w-auto m-0" src={logo} alt="logo" />
-    <span className="font-bold cursor-default tracking-wider">MUJTABA</span>
+    <span className="font-bold cursor-default tracking-wider text-blue-500 hidden">MUJTABA</span>
   </div>
 );
 
@@ -34,8 +34,8 @@ const Navigation = () => (
       {NAV_ITEMS.map((item) => (
         <li key={item.name}>
           <Link
-            className="cursor-pointer text-gray-300 hover:text-blue-950 px-3 py-2 rounded-md"
-            activeClass="underline underline-offset-8 decoration-blue-950 text-blue-950 px-3 py-2"
+            className="cursor-pointer hover:text-blue-500 px-3 py-2 rounded-md"
+            activeClass="underline underline-offset-8 decoration-blue-500 text-blue-500 px-3 py-2"
             spy={true}
             to={item.to}
             smooth={true}
