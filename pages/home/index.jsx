@@ -14,14 +14,14 @@ export default function Home() {
         autoplay
         />
       <h1 className="sm:text-5xl text-4xl text-blue-500 font-bold mb-4">Almujtaba Abdalla</h1>
-      <p className="text-xl mb-8 text-blue-100"><Typewriter
+      <div className="text-xl mb-8 text-blue-100"><Typewriter
             options={{
               strings: ["Fullstack Web Developer!", "Python Developer", "React Developer"],
               autoStart: true,
               delay: 75,
               loop: true,
             }}
-          /></p>
+          /></div>
       <p className="text-lg mb-8 text-blue-100">I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences.</p>
       <div className="flex space-x-4">
         <a href="https://github.com/0x41mujt4b4" target="_blank" rel="noopener noreferrer"><FaGithub size={24} color="#fff" /></a>
