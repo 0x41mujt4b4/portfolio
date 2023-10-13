@@ -51,12 +51,12 @@ function Projects() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="rounded overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer"
+            className="overflow-hidden transform transition duration-500 hover:scale-105 cursor-pointer bg-blue-400 rounded-lg border bg-opacity-20 backdrop-blur-xl drop-shadow-lg border-blue-900 shadow-lg"
           >
             <Image className="w-full" src={project.image} alt={project.name} />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">{project.name}</div>
-              <p className="text-gray-700 text-base">{project.description}</p>
+              <p className="text-gray-100 text-base">{project.description}</p>
             </div>
           </div>
         ))}
