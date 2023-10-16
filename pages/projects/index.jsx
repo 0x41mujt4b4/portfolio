@@ -50,7 +50,7 @@ function Projects() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
           <div
-            key={project.id}
+            key={project.name}
             className="overflow-hidden transform transition duration-500 hover:scale-105 cursor-pointer bg-blue-400 rounded-lg border bg-opacity-20 backdrop-blur-xl drop-shadow-lg border-blue-900 shadow-lg"
           >
             <Image className="w-full" src={project.image} alt={project.name} />

@@ -1,4 +1,6 @@
 import React from 'react'
+import myImg from "@/public/myImg.jpg"
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -11,7 +13,7 @@ const About = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-12 sm:p-16">
         <div className="flex flex-col justify-center items-center">
-          <img src="https://example.com/profile-pic.png" alt="Profile picture" className="w-48 rounded-full mx-auto" />
+          <Image src={myImg} alt="Profile picture" className="w-48 rounded-full mx-auto" />
           <div className="mt-6">
             <h3 className="text-2xl font-semibold">John Doe</h3>
             <p className="text-gray-400 mb-6">Software Engineer</p>
