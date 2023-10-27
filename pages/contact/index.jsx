@@ -29,26 +29,27 @@ const contacts = [
 function Contact() {
   return (
     <section className="container px-24 mx-auto min-h-screen" id="contact">
-      <div className="text-center before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto before:dark:bg-cyan-400">
+      <div className="text-center before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto before:dark:bg-cyan-400 mb-8">
         <h3 className="text-3xl font-semibold text-cyan-400">Contact Me</h3>
         <span className="text-sm font-bold tracking-wider uppercase dark:text-gray-400">
           Get In Touch With Me
         </span>
       </div>
-      <div className="flex flex-row">
-        <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
+      <div className="flex sm:flex-row flex-col justify-around">
+        <div className="basis-1/4">
           <div className="mb-12 max-w-[570px] lg:mb-0 text-white">
-            <p className="text-body-color mb-9 text-base leading-relaxed">
+            <p className="text-body-color mb-9 text-base leading-relaxed text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eius tempor incididunt ut labore et dolore magna aliqua. Ut enim
               adiqua minim veniam quis nostrud exercitation ullamco
             </p>
+            <div className="flex w-full sm:flex-col flex-row flex-wrap ">
             {contacts.map((contact) => (
-              <div className="mb-8 flex w-full max-w-[370px]" key={contact.name}>
-                <div className="bg-blue-500 text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
+              <div className="flex flex-row w-full mb-8 h-auto" key={contact.name}>
+                <div className="p-4 bg-blue-500 text-primary mr-6 flex items-center justify-center rounded bg-opacity-5">
                   {contact.icon}
                 </div>
-                <div className="w-full">
+                <div className="">
                   <h4 className="text-dark mb-1 text-xl font-bold">
                     {contact.name}
                   </h4>
@@ -58,9 +59,10 @@ function Contact() {
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </div>
-        <div className="relative bg-blue-400 rounded-lg border bg-opacity-20 backdrop-blur-xl drop-shadow-lg border-blue-900 p-8 shadow-lg sm:p-12 ">
+        <div className="bg-blue-400 rounded-lg border bg-opacity-20 backdrop-blur-xl drop-shadow-lg border-blue-900 p-8 shadow-lg sm:p-12 basis-1/2">
           <form>
             <div className="mb-6">
               <input
