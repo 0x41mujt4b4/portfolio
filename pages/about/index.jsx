@@ -15,7 +15,7 @@ const About = () => {
         <div className="flex flex-col justify-center items-center">
           <Image src={myImg} alt="Profile picture" className="w-48 rounded-full mx-auto" />
           <div className="mt-6">
-            <h3 className="text-2xl font-semibold">John Doe</h3>
+            <h3 className="text-2xl font-semibold">Almujtaba Abdalla</h3>
             <p className="text-gray-400 mb-6">Software Engineer</p>
             <p>Hi! I'm a software engineer with a passion for building web applications. I have 3+ years of experience in the industry, and I'm always looking for new ways to learn and grow. I'm also a big fan of open source software, and I contribute to a number of projects in my spare time.</p>
           </div>
