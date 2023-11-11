@@ -61,7 +61,7 @@ function Contact() {
             </div>
           ))}
         </div>
-        <div className="bg-blue-400 rounded-lg border bg-opacity-20 backdrop-blur-xl drop-shadow-lg border-blue-900 px-8 pt-6 pb-8 mb-4 text-center ">
+        <div className="bg-blue-400 rounded-lg border bg-opacity-20 backdrop-blur-xl drop-shadow-lg border-blue-900 px-8 pt-6 pb-2 mb-4 text-center sm:w-1/2">
           <form className="">
             <div className="mb-4">
               <input
