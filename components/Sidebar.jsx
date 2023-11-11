@@ -7,7 +7,7 @@ import { Link } from "react-scroll";
 // Define navigation outside the component to avoid re-rendering
 const navigation = [
   { name: "Home", to: "home", icon: MdHome },
-  { name: "Service", to: "service", icon: FaHandHoldingHeart },
+  { name: "Experience", to: "experience", icon: FaHandHoldingHeart },
   { name: "Projects", to: "projects", icon: MdFolder },
   { name: "Contact", to: "contact", icon: MdContactPage },
   { name: "About", to: "about", icon: MdInfo },
@@ -17,7 +17,7 @@ function Sidebar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="sm:hidden flex items-center top-0 right-0 h-full justify-center fixed">
+    <div className="sm:hidden flex items-center top-0 right-0 h-full justify-center z-50 fixed">
       <div className={`backdrop-brightness-125 text-white backdrop-blur-sm rounded-lg py-2 ${open ? "w-36" : "w-12"} duration-300 `}>
         <BsArrowLeftShort className={`bg-blue-900 text-3xl rounded-full absolute -left-4 top-9 cursor-pointer ${open && "rotate-180"}`} onClick={() => setOpen(!open)} />
         <div className={`flex justify-center`}>
