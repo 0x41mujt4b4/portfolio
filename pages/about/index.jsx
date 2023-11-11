@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <section className="container mx-auto text-gray-100" id="about">
+    <section className="container mx-auto text-gray-100 " id="about">
       <div className="text-center before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto before:dark:bg-cyan-400">
         <h3 className="text-3xl font-semibold text-cyan-400">About Me</h3>
         <span className="text-sm font-bold tracking-wider uppercase dark:text-gray-400">
@@ -14,7 +14,7 @@ const About = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-12 sm:p-16">
         <div className="flex flex-col justify-center items-center">
           <Image src={myImg} alt="Profile picture" className="w-48 rounded-full mx-auto" />
-          <div className="mt-6">
+          <div className="mt-6 text-center">
             <h3 className="text-2xl font-semibold">Almujtaba Abdalla</h3>
             <p className="text-gray-400 mb-6">Software Engineer</p>
             <p>Hi! I'm a software engineer with a passion for building web applications. I have 3+ years of experience in the industry, and I'm always looking for new ways to learn and grow. I'm also a big fan of open source software, and I contribute to a number of projects in my spare time.</p>
