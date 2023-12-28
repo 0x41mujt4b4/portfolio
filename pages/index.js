@@ -11,15 +11,15 @@ import Footer from '@/components/Footer'
 export default function App() {
   return (
     <>
-    <Sidebar />
+    {/* <Sidebar /> */}
     <Navbar />
-    <main className='flex flex-col'>
+    {/* <main className='flex flex-col'> */}
       <Home />
       <Experience />
       <Projects />
       <Contact />
       <About />
-    </main>
+    {/* </main> */}
     <Footer/>
     </>
   );
