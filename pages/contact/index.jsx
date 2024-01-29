@@ -1,4 +1,5 @@
 import React from "react";
+import Title from "@/components/Title";
 import { FaPhone, FaHouse, FaEnvelope, FaWhatsapp } from "react-icons/fa6";
 
 const contacts = [
@@ -29,19 +30,9 @@ const contacts = [
 function Contact() {
   return (
     <section className="container flex flex-col mx-auto min-h-screen" id="contact">
-      <div className="text-center before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto before:dark:bg-cyan-400">
-        <h3 className="text-3xl font-semibold text-cyan-400">Contact Me</h3>
-        <span className="text-sm font-bold tracking-wider uppercase dark:text-gray-400">
-          Get In Touch With Me
-        </span>
-        <p className="text-gray-200 mb-9 text-base leading-relaxed text-center mx-auto md:w-1/2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim adiqua
-          minim veniam quis nostrud exercitation ullamco
-        </p>
-      </div>
-      <div className="flex sm:flex-row flex-col justify-center ">
-        <div className="flex flex-col p-4 justify-center md:p-8 basis-1/4 text-white w-full h-full flex-wrap ">
+      <Title title="Contact Me" subtitle="Get In Touch With Me" />
+      <div className="flex sm:flex-row flex-col justify-evenly ">
+        <div className="flex flex-col justify-center basis-1/4 text-white w-full h-full flex-wrap ">
           {contacts.map((contact) => (
             <div
               className="flex flex-row w-full mb-8 h-auto"
@@ -67,34 +58,34 @@ function Contact() {
               <input
                 type="text"
                 placeholder="Your Name"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
             <div className="mb-4">
               <input
                 type="email"
                 placeholder="Your Email"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
             <div className="mb-4">
               <input
                 type="text"
                 placeholder="Your Phone"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
-            <div className="mb-6">
+            <div className="mb-4">
               <textarea
                 rows="6"
                 placeholder="Your Message"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               ></textarea>
             </div>
             <div>
               <button
                 type="submit"
-                className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-1 px-3 rounded focus:outline-none focus:shadow-outline"
               >
                 Send Message
               </button>
